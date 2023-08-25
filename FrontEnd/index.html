@@ -1,109 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Sophie Bluel - Architecte d'intérieur</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+		rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+	<script src="./assets/script/gallery.js" defer></script>
+	<script src="./assets/script/script.js" defer></script>
+	<script src="./assets/script/admin.js" defer></script>
 </head>
-<body>
-<header>
-	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
-	<nav>
-		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li>login</li>
-			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
-		</ul>
-	</nav>
-</header>
-<main>
-	<section id="introduction">
-		<figure>
-			<img src="./assets/images/sophie-bluel.png" alt="">
-		</figure>
-		<article>
-			<h2>Designer d'espace</h2>
-			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
-			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
-			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
-		</article>
-	</section>
-	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div class="gallery">
-			<figure>
-				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
-				<figcaption>Abajour Tahina</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-v.png" alt="Appartement Paris V">
-				<figcaption>Appartement Paris V</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/restaurant-sushisen-londres.png" alt="Restaurant Sushisen - Londres">
-				<figcaption>Restaurant Sushisen - Londres</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/la-balisiere.png" alt="Villa “La Balisiere” - Port Louis">
-				<figcaption>Villa “La Balisiere” - Port Louis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/structures-thermopolis.png" alt="Structures Thermopolis">
-				<figcaption>Structures Thermopolis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-x.png" alt="Appartement Paris X">
-				<figcaption>Appartement Paris X</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/le-coteau-cassis.png" alt="Pavillon “Le coteau” - Cassis">
-				<figcaption>Pavillon “Le coteau” - Cassis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/villa-ferneze.png" alt="Villa Ferneze - Isola d’Elba">
-				<figcaption>Villa Ferneze - Isola d’Elba</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-xviii.png" alt="Appartement Paris XVIII">
-				<figcaption>Appartement Paris XVIII</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/bar-lullaby-paris.png" alt="Bar “Lullaby” - Paris">
-				<figcaption>Bar “Lullaby” - Paris</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
-				<figcaption>Hotel First Arte - New Delhi</figcaption>
-			</figure>
-		</div>
-	</section>
-	<section id="contact">
-		<h2>Contact</h2>
-		<p>Vous avez un projet ? Discutons-en !</p>
-		<form action="#" method="post">
-			<label for="name">Nom</label>
-			<input type="text" name="name" id="name">
-			<label for="email">Email</label>
-			<input type="email" name="email" id="email">
-			<label for="message">Message</label>
-			<textarea name="message" id="message" cols="30" rows="10"></textarea>
-			<input type="submit" value="Envoyer">
-		</form>
-	</section>
-</main>
 
-<footer>
-	<nav>
-		<ul>
-			<li>Mentions Légales</li>
-		</ul>
-	</nav>
-</footer>
+<body>
+	<div class="admin-header" id="admin">
+		<div class="admin-row">
+			<i class="fa-regular fa-pen-to-square"></i>
+			<p>Mode d'edition</p>
+			<button class="admin-button" id="admin-button">publier les changements</button>
+		</div>
+	</div>
+	<header>
+		<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+		<nav>
+			<ul>
+				<li><a href="#portfolio">projets</a></li>
+				<li><a href="#contact">contact</a></li>
+				<li id="login_out"><a href="login.html">login</a></li>
+				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="introduction">
+			<figure class="admin-profil">
+				<img src="./assets/images/sophie-bluel.png" alt="">
+				<div class="admin-modification" id="admin">
+					<i class="fa-regular fa-pen-to-square"><button onclick="projectmodif()">Modifier</button></i>
+				</div>
+			</figure>
+			<article>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison
+					finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les
+					couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du
+					chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG,
+					décorateur(trice)</p>
+			</article>
+		</section>
+		<section id="portfolio">
+			<div class="admin-title">
+				<h2>Mes Projets</h2>
+				<div class="admin-modification" id="admin">
+					<i class="fa-regular fa-pen-to-square"><button id="projectbtn"
+							onclick="projectmodif()">Modifier</button></i>
+				</div>
+			</div>
+			<div class="filter">
+				<ul class="filter-row">
+					<li><button class="active" onclick="filterAll(this)">Tous
+						</button></li>
+					<li><button onclick="filterObject(this)">Objets</button></li>
+					<li><button onclick="filterAppart(this)">Appartements</button></li>
+					<li><button onclick="filterHotel(this)">Hotels & restaurants</button></li>
+				</ul>
+			</div>
+			<div class="gallery" id="gallery">
+			</div>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>Vous avez un projet ? Discutons-en !</p>
+			<form action="#" method="post">
+				<label for="name">Nom</label>
+				<input type="text" name="name" id="name">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<input type="submit" value="Envoyer" class="">
+			</form>
+		</section>
+
+		<div class="modal" id="modal">
+			<div class="modal-content-param" id="modal-content-param">
+				<span class="close">&times;</span>
+				<p>Galerie photo</p>
+				<div class="modal-gallery" id="modal-gallery">
+				</div>
+				<hr>
+				<div class="modal-button">
+					<button id="addshot" class="addshot" onclick="modaladdworks()">Ajouter une photo</button>
+					<button id="delgal" class="delgal">Supprimer la galerie</button>
+				</div>
+			</div>
+			<div class="modal-content-add" id="modal-content-add">
+				<div class="modal-add-top">
+					<span class="arrow" id="arrow">&larr;</span>
+					<span class="close">&times;</span>
+				</div>
+				<p>Ajout photo</p>
+				<form id="form-add" method="post">
+					<div class="form-img">
+						<figure class='img-container' id="img-container"><img id='preview' src='' alt='preview'>
+						</figure>
+						<div class="form-img-input" id="form-img-input">
+							<i class="fa-regular fa-image"></i>
+							<label for="file-input">+ Ajouter un fichier</label>
+							<input type="file" id="file-input" max-size="4000" accept=".png, .jpg" required>
+							<p>jpg, png : 4mo max</p>
+						</div>
+					</div>
+					<div class="form-title">
+						<label for="title">Titre</label>
+						<input type="text" name="title" id="title" required>
+					</div>
+					<div class="form-cat">
+						<label for="category">Catégorie</label>
+						<select name="category" id="category" required>
+							<option value="" disabled selected></option>
+						</select>
+					</div>
+					<hr>
+						<input type="submit" id="addshotfinal" class="addshot" onclick="addworks(event)" value="Ajouter une photo" disabled></input>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
+	</footer>
 </body>
+
 </html>
