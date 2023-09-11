@@ -797,3 +797,9 @@ footer nav ul {
 .message:hover, .loginer:hover, .modal-button .addshot:hover{
 	background-color: #0E2F28;
 }
+
+.error{
+	color: red;
+	font-size: 14px;
+	font-weight: 400;
+}

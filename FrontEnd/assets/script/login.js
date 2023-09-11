@@ -10,6 +10,10 @@ document.querySelector('form input[type="submit"]').addEventListener('click', as
         email: email,
         password: password
     }
+    
+    document.getElementById("email-error").textContent = "";
+    document.getElementById("password-error").textContent = "";
+
     fetch('http://localhost:5678/api/users/login', {
         method: 'POST',
         headers: {
@@ -18,24 +22,26 @@ document.querySelector('form input[type="submit"]').addEventListener('click', as
         },
         body: JSON.stringify(user),
     })
-        .then((response) => {
-            if (response.status == 200) {
-                return response.json()
-            }
-            else if (response.status == 404) {
-                alert("Erreur dans l'identifiant ou le mot de passe");
-            }
-            else {
-                throw Error(response.statusText)
-            }
-        })
-        .then((data) => {
+    .then(async (response) => {
+        if (response.status == 200) {
+            const data = await response.json();
             localStorage.setItem('token', data.token);
             localStorage.setItem('userId', data.userId);
             window.location = "index.html";
-        })
-        .catch((err) => {
-            console.error("Erreur");
-        });
-}
-);
+        }
+        else if (response.status == 404) {
+            const errorData = await response.json();
+            document.getElementById("email-error").textContent = "Identifiant incorrect";
+        }
+        else if (response.status == 401) {
+            const errorData = await response.json();
+            document.getElementById("password-error").textContent = "Mot de passe incorrect";
+        }
+        else {
+            throw Error(response.statusText);
+        }
+    })
+    .catch((err) => {
+        console.error("Erreur :", err);
+    });
+});
