@@ -14,7 +14,7 @@ document.querySelector('form input[type="submit"]').addEventListener('click', as
     document.getElementById("email-error").textContent = "";
     document.getElementById("password-error").textContent = "";
 
-    fetch('http://localhost:5678/api/users/login', {
+    fetch('https://sophiebluel.onrender.com/api/users/login', {
         method: 'POST',
         headers: {
             Accept: "application/json",

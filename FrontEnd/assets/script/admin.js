@@ -58,7 +58,7 @@ function projectmodif() {
     contentparam.style.display = "flex";
     contentadd.style.display = "none";
     modal.style.display = "block";
-    fetchWorks("http://localhost:5678/api/works");
+    fetchWorks("https://sophiebluel.onrender.com/api/works");
     span.onclick = closemodal;
 
     window.addEventListener("click", function (event) {
@@ -123,7 +123,7 @@ function modaladdworks() {
         }
     };
 
-    fetch("http://localhost:5678/api/categories")
+    fetch("https://sophiebluel.onrender.com/api/categories")
         .then(res => res.json())
         .then(function (data) {
             for (categories in data) {
@@ -144,7 +144,7 @@ function modaladdworks() {
 
 function deleteworks(event, id) {
     event.preventDefault();
-    fetch(`http://localhost:5678/api/works/${id}`, {
+    fetch(`https://sophiebluel.onrender.com/api/works/${id}`, {
         method: "DELETE",
         headers: {
             "Authorization": `Bearer ${token}`
@@ -180,7 +180,7 @@ function addworks(event) {
     formData.append("category", category);
 
 
-    fetch("http://localhost:5678/api/works", {
+    fetch("https://sophiebluel.onrender.com/api/works", {
         headers: {
             "Authorization": `Bearer ${token}`
         },

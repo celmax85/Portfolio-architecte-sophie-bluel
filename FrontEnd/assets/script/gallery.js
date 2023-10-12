@@ -1,4 +1,4 @@
-const urlWorks = "http://localhost:5678/api/works/";
+const urlWorks = "https://sophiebluel.onrender.com/api/works/";
 const gallery = document.getElementById("gallery");
 
 const getWorks = () => {
