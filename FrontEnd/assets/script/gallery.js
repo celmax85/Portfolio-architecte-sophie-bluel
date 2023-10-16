@@ -17,11 +17,6 @@ const getWorks = () => {
         })
 
 }
-
-if (window.location.pathname === "https://bluel.celmax.dev/") {
-    getWorks();
-}
-
 function filterFigures(filterId, btn) {
     let gallery = document.getElementById("gallery");
     let figures = gallery.querySelectorAll("figure");
