@@ -18,11 +18,6 @@ const getWorks = () => {
 
 }
 
-if (window.location.href.indexOf("index.html") > -1) {
-    getWorks();
-}
-
-
 function filterFigures(filterId, btn) {
     let gallery = document.getElementById("gallery");
     let figures = gallery.querySelectorAll("figure");
