@@ -18,7 +18,7 @@ const getWorks = () => {
 
 }
 
-if (window.location.pathname === "/") {
+if (window.location.pathname === "https://bluel.celmax.dev/") {
     getWorks();
 }
 
